@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <style>
+        body{
+            font-family: Roboto, Lato;
+        }
+        .PC-Product-Page #main
+        {
+            display: grid;            
+            gap: 15px;            
+            grid-template-columns: repeat(4, 24%);         
+            width: 85%;
+            margin: auto;            
+            /* border: 1px solid red;             */
+            justify-content: space-between;
+            
+        }        
+        .PC-Product-Page .card
+        {
+            height: 450px;
+            /* background-color: whitesmoke; */
+            padding: 10px 15px;
+            box-sizing: border-box;
+            text-align: center;
+            position: relative;
+            border: 1px solid #e5e5e5;
+            /* border: 1px solid red; */            
+            /* margin-left: 20%; */
+            
+        }
+        .PC-Product-Page .card img{
+            width: 100%;
+            height: 230px;
+        }
+        .PC-Product-Page .card button
+        {
+            position: absolute;
+            bottom: 10px;
+            left: 5%;
+            width: 90%;
+            height: 40px;
+            border:none;
+            background-color: white;
+            color: #00afef;
+            border: 1px solid #e5e5e5;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .PC-Product-Page .card button:hover{
+            background-color: #00afef;
+            color: white;
+            font-weight: bold;
+        }
+        .PC-Product-Page .card:hover{
+            cursor: pointer;
+        }
+        .PC-Product-Page .card h1 {           
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: rgb(51, 51, 51);
+            line-height: 1.5;
+        }
+        .PC-Product-Page .card h4{
+            background-color: #6da523;
+            color: white;
+            width: 15%;
+            font-size: 12px;           
+            padding: 4px 3px;
+            margin: auto;
+            border-radius: 5px;
+        }
+        .PC-Product-Page .card h4 .iconify {
+            margin-bottom: -1px;
+            margin-left: 2px;
+            /* background-color: black; */
+        }
+        .PC-Product-Page .card h3 .iconify {
+            margin-bottom: -3px;
+             /* background-color: black; */  
+             }
+
+        .PC-Product-Page .tag {
+        background-color: #ef5350;
+        color: rgb(255, 255, 255);        
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 12px;
+        width: 35%;
+        padding: 3px 5px;
+        margin-left: -15px;
+        margin-top: -10px;
+        }
+    </style>
+</head>
+<body>  
+    <div class="PC-Product-Page">
+        <div id="main" >          
+        </div> 
+    </div> 
+     
+    
+</body>
+</html>
+<script>
+
+var data = JSON.parse(localStorage.getItem("mamaEarthProducts"));
+// var data = JSON.parse(localStorage.getItem("mamaEarthProducts")) || [];
+console.log(data);
+var main = document.getElementById("main");
+        data.forEach(item => {
+            main.innerHTML += 
+            `
+            <div class="card">
+                <div class="tagsName tag">Best Seller</div>
+                <img src="${item.imgUrl[0]}">
+                <h1>${item.title}</h1>
+                <h4>${item.rating}<span class="iconify" data-icon="dashicons:star-filled"></span></h4>
+                <h3><span class="iconify" data-icon="icons8:rupee"></span>${item.price}</h3>
+                <button onclick = "addToCart()">Add to Cart</button>
+             </div>
+            `
+        });
+       
+addToCart();       
+ function addToCart(e)
+{
+    console.log(e.parentNode);
+    // var title = e.target.parentNode.querySelector("h1").textContent;
+    // var rating = e.target.parentNode.querySelector("h4").textContent;    
+    // var price = e.target.parentNode.querySelector("h3").textContent;
+    // var img = e.target.parentNode.parentNode.querySelector("img").src;
+    // console.log(title,rating, price);
+
+
+//  var obj = 
+//  {
+//      title : title,
+//      price : price,
+//      imgURL : img
+//  }
+//  var flag = false;
+
+//  for(var i=0; i<cart.length; i++)
+//  {
+//      if(cart[i].title == title && cart[i].category == ctrg && cart[i].area == cart[i].area && cart[i].price == price)
+//      {
+//          flag = true;
+//          break;
+//      }
+//  }
+//  if(flag)
+//     alert("This item is already in the cart");
+//     else
+//     {
+//         cart.push(obj);
+//         localStorage.setItem("CartMenu", JSON.stringify(cart));
+//         var cartCount = document.getElementById("cartCount");
+//         cartCount.textContent = cart.length; 
+//         alert("Item pushed to cart succesfully");  
+//     }
+
+}
+
+
+// var cartCount = document.getElementById("cartCount");
+// cartCount.textContent = cart.length;         
+
+</script>
