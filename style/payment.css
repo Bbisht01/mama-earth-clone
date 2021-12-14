@@ -1,0 +1,85 @@
+#payment-A{
+    /* height: 600px; */
+    width: 60%;
+    border: 1px solid red ;
+    margin-left: 5%;
+}
+
+#payment-A > div {
+    width: 100%;
+}
+#payment-A-a{
+    display: inline-block;
+    /* border: 1px solid gray; */
+}
+
+#payment-A-a-1 {
+   /* margin-left: 50px ; */
+   display: inline-block; 
+}
+#payment-A-a-2  {
+    margin-left: 50px ;
+    display: inline-block;
+    
+}
+
+#payment-A-a-2-btn{
+    border: 1px solid #20b9f1; 
+    color: #20b9f1;
+    height: 50px;
+    width: 120px;
+    border-radius: 5%;
+    background-color: white;
+}
+#payment-A-a-2-btn:hover{
+    color: white;
+    background-color: #20b9f1;
+}
+
+/* #userAddress{
+    display: flex;
+
+
+} */
+#userAddress > input {
+    border-radius: 20px;    
+}
+input{
+    height: 30px;
+    border-radius: 5px;
+    border: 0.2px solid gray;
+}
+
+
+.userAddress-2-input{
+    display: grid;
+    margin-top: 5px;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+}
+
+.userAddress-3-input{
+    display: grid;
+    grid-gap: 10px;
+    margin-top: 5px;
+    grid-template-columns: auto auto auto;
+}
+
+.userAddress-1-input{
+    display: grid;
+    margin-top: 5px;
+    grid-template-columns: auto ;
+}
+
+#userAddress-type{
+    height: 100px;
+    border: 1px solid red;
+    margin-top: 20px;
+}
+
+#payment-method{
+    border: 1px solid green;
+    height: 500px;
+    width: 100%;
+    margin-top: 20px;
+}
