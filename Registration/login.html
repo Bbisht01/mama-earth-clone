@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{            
+    display: flex;
+    width: 60%;
+    border: 1px solid red;
+    margin: auto;
+}
+form{
+    width: 60%;
+    
+}
+#register-form{
+    width: 100%;
+    line-height: 2;
+    border: 1px solid red;
+    
+}
+    </style>
+    
+</head>
+<body>
+    <div id="container">
+        
+
+    <div id="Login-form">
+        <h2>Login Form</h2>
+        <form action="">           
+            <input type="text" id="login-username" placeholder="Username">
+            <input type="text" id="login-password" placeholder="password">            
+        </form>
+        <button onclick="Login()">Login</button>
+    </div>
+</div>
+</body>
+</html>
+<script>
+
+    // Api-Link-https://masai-api-mocker.herokuapp.com/
+
+    // Register-https://masai-api-mocker.herokuapp.com/auth/register
+
+
+async function Login(){
+let login_data = {
+    username : document.getElementById("login-username").value,
+    password : document.getElementById("login-password").value,    
+};
+
+login_data = JSON.stringify(login_data);
+console.log(login_data);
+
+let login_api = `https://masai-api-mocker.herokuapp.com/auth/login`;
+
+
+// Body-Send data to body
+
+let response = await fetch(login_api,{
+    method: "POST",
+    body:login_data,
+
+    // More extra info about my request
+    headers:{
+        "Content-Type": "application/json"
+    },
+});
+
+let data = await response.json();
+let name=document.getElementById("login-username").value;
+console.log(data);
+
+  console.log(data)
+        if (data.error == false){
+            userData(name, data.token)
+           // window.location.href="sucs.html"
+            //profileDetails(name,data.token)
+
+        }else{
+            alert("wrong credentials");
+
+            // document.getElementById("error").textContent=data.message;
+        }
+}
+
+
+
+async function userData(name,token){
+        console.log(name,token)
+        let url=`https://masai-api-mocker.herokuapp.com/user/${name}`
+
+        let res=await fetch(url,{
+            headers:{
+                "Content-Type":"application/json",
+                "Authorization": `Bearer ${token}`
+            },
+        })
+
+        let data= await res.json();
+
+        //console.log(data)
+        console.log(data)
+        let username=data.name;
+        let email=data.email;
+        //console.log(username,email);
+        let user={
+            login:true,
+            name:username,
+            email:email
+        }
+        console.log(user)
+        localStorage.setItem("userDetail",JSON.stringify(user))
+        window.location.href="sucs.html"
+    }
+
+
+
+</script>
