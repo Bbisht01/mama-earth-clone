@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel = "stylesheet" href="./styles/navvar.css">
     <style>
         body{
             font-family: Roboto, Lato;
@@ -101,6 +106,7 @@
 </head>
 <body>  
     <div class="PC-Product-Page">
+        <div id = "nav"></div>
         <div id="main" >          
         </div> 
     </div> 
@@ -108,7 +114,13 @@
     
 </body>
 </html>
-<script>
+<script type = "module">
+
+    import navbar from "./components/navbar.js"
+
+    let navbar_container = document.getElementById("nav");
+
+    navbar_container.innerHTML = navbar();
 
 var data = JSON.parse(localStorage.getItem("mamaEarthProducts"));
 // var data = JSON.parse(localStorage.getItem("mamaEarthProducts")) || [];

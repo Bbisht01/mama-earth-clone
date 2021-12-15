@@ -190,6 +190,7 @@ li{
     margin-top: 50px;
     display: inline-block;
     vertical-align: top;
+    gap:90px;
 }
 .bestsr{
    border: 1px solid red;
