@@ -9,6 +9,7 @@ a{
     color: white;
     font-weight: bold; 
     display: inline-block; 
+    margin-top:5px;
 }
 p{
     margin-left: 20px;
@@ -19,7 +20,8 @@ p{
 .fa-user{
     display: inline-block; 
     color: white;
-    margin-left:200px;
+    margin-left:10%;
+    margin-top:5px;
 }
 /* .................................................nav2........................................... */
 
@@ -72,13 +74,13 @@ p{
     /* margin-top: 10px; */
 }
 .fa-shopping-cart{
-    margin-left: 950px;
+    margin-left: 65%;
     color: #00afef;
     margin-top: 20px;
 }
 .fa-user-alt{
     color: #00afef;
-    margin-left: 70px;
+    margin-left: 5%;
     margin-top: 10px;
 }
 
