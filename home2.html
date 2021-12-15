@@ -13,7 +13,8 @@
    
 </head>
 <body>
-    <div id = "nav1">
+    <div id = "container"></div>
+    <!-- <div id = "nav1">
         <a href = ""><p>Asia's first brand with MADE SAFE certified products</p></a>
         <a href = ""><p id = "navt">Free Shippping above 399 | COD Available | Ertra 5% OFF
             on prepaid orders | Shop Now
@@ -158,7 +159,7 @@
         <p class="hometxt">BLOG</p>
         <p class="hometxt">PLANT GOODNESS</p>
         <p class="hometxt">STORE LOCATOR</p>
-    </div>
+    </div> -->
 
 
     <!-- ................................CARSOULES................................. -->
@@ -289,3 +290,10 @@
     </div>
 </body>
 </html>
+<script type = "module">
+  import navbar from "./components/navbar.js"
+
+  let container = document.getElementById("container");
+
+  container.innerHTML = navbar();
+</script>
