@@ -1,5 +1,5 @@
-function navbar(){
-    return `<nav>
+function navbar() {
+  return `<nav>
     
     <div id = "nav1">
     <a href = ""><p>Asia's first brand with MADE SAFE certified products</p></a>
@@ -148,48 +148,62 @@ function navbar(){
     <p class="hometxt">STORE LOCATOR</p>
 </div>
 
-<div class="carousel">
-       
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <img src="https://images.ctfassets.net/66mrrren2unf/4I2Ji1TxrGoZUZi1LpO9lb/945ef7e2040f21de43c0f327ead451b5/desktop-body-lotion.jpg?q=40" alt="Los Angeles" style="width:100%;">
-    </div>
-
-    <div class="item">
-      <img src="https://images.ctfassets.net/66mrrren2unf/rBK093QawZY4YOdbxSjHJ/7bac4d18e5638b28b13a27315564b14d/Desktop.jpg?q=40" alt="Chicago" style="width:100%;">
-    </div>
-  
-    <div class="item">
-      <img src="https://images.ctfassets.net/66mrrren2unf/62fMX7z3RN55j8FpWnIxhg/1a194a111a058b377248805cdea8449d/Desktop_Without_CTA.jpg?q=40" alt="New york" style="width:100%;">
-    </div>
-
-    <div class="item">
-        <img src="https://images.ctfassets.net/66mrrren2unf/5OhEUHOLxFpTkjZ2Zk2Y4S/f1ccaaf5d228df39ccd858841b23d997/Desktop.jpg?q=40" alt="New york" style="width:100%;">
-      </div>
+<div
+id="carouselExampleInterval"
+class="carousel slide"
+data-ride="carousel"
+>
+<div class="carousel-inner">
+  <div class="carousel-item active" data-interval="2000">
+    <img
+      src="https://images.ctfassets.net/66mrrren2unf/5OhEUHOLxFpTkjZ2Zk2Y4S/f1ccaaf5d228df39ccd858841b23d997/Desktop.jpg?q=40"
+      class="d-block w-100"
+      alt="..."
+    />
   </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
+  <div class="carousel-item" data-interval="2000">
+    <img
+      src="https://images.ctfassets.net/66mrrren2unf/4I2Ji1TxrGoZUZi1LpO9lb/945ef7e2040f21de43c0f327ead451b5/desktop-body-lotion.jpg?q=40"
+      class="d-block w-100"
+      alt="..."
+    />
+  </div>
+  <div class="carousel-item" data-interval="2000">
+    <img
+      src="https://images.ctfassets.net/66mrrren2unf/62fMX7z3RN55j8FpWnIxhg/1a194a111a058b377248805cdea8449d/Desktop_Without_CTA.jpg?q=40"
+      class="d-block w-100"
+      alt="..."
+    />
+  </div>
+  <div class="carousel-item" data-interval="2000">
+    <img
+      src="https://images.ctfassets.net/66mrrren2unf/rBK093QawZY4YOdbxSjHJ/7bac4d18e5638b28b13a27315564b14d/Desktop.jpg?q=40"
+      class="d-block w-100"
+      alt="..."
+    />
+  </div>
 </div>
+<a
+  class="carousel-control-prev"
+  href="#carouselExampleInterval"
+  role="button"
+  data-slide="prev"
+>
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a
+  class="carousel-control-next"
+  href="#carouselExampleInterval"
+  role="button"
+  data-slide="next"
+>
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="sr-only">Next</span>
+</a>
 </div>
 </nav>
- `
+ `;
 }
 
-export default navbar
+export default navbar;
