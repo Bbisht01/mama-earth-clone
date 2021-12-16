@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+    <div id="signupCont">
+        <a href="login.html"><div id="signupCont-icn"><span class="iconify" data-icon="ant-design:arrow-left-outlined"></span></div></a>
+        <div id="signupContent">
+
+            <h3>Signup for the Goodness Inside</h3>
+
+            <input id="signupContent-inp-a" class="signupContent-inp" type="text" placeholder="Phone Number">            
+            <input id="signupContent-inp-c" class="signupContent-inp" type="text" placeholder="Email">
+            <input id="username" class="signupContent-inp" type="text" placeholder="username">           
+            <input id="signupContent-inp-d" class="signupContent-inp" type="password" placeholder="password">
+            <div id="signup-btn">
+              <button >SignUp</button>
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
+<script>
+
+document.querySelector('button').addEventListener('click',signUp);
+var userArr = JSON.parse(localStorage.getItem('userData')) || [];
+
+
+
+function signUp(){
+    var phone = document.getElementById('signupContent-inp-a').value
+    var username = document.getElementById('username').value
+    var Email = document.getElementById('signupContent-inp-c').value;
+    var pass = document.getElementById('signupContent-inp-d').value;
+
+    var count = 0;
+    for(var i = 0 ; i<Email.length;i++){
+        if(Email[i] == '@'){
+            count = 1
+        }
+    }
+
+    if(count == 0){
+        alert('Invalid Email Id')
+    }else{
+   
+if(phone.length<10){
+    alert('Invalid Phone no.')
+    
+}else{
+
+var userCredentials = {
+    email:Email,
+    passWord:pass,
+    phoneNo:phone,
+    userName:username,
+    
+};
+
+userArr.push(userCredentials);
+localStorage.setItem('userDetail',JSON.stringify(userArr));
+
+window.location.href = "login.html"
+}
+
+}
+}
+</script>
