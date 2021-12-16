@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #imageDiv{
+        display: flex;
+        flex-direction: column;
+  width:300px;
+    }
+    #imageDiv>p{
+        margin:10px;
+        border:1px solid blue;
+    }
+
+</style>
+<body>
+    <!-- <h1>Cart Page</h1> -->
+<div id="counting"></div>
+        <div id="imageDiv">
+            <!-- <img src="" alt=""> -->
+        </div>
+          <div id="finalPrice"></div>
+        
+    </div>
+</body>
+</html>
+<script>
+ var cartData = JSON.parse(localStorage.getItem("CartItems"));
+
+ var displaycartData = JSON.parse(localStorage.getItem("mamaEarthProducts"));
+
+ var counting = document.getElementById('counting')
+
+ var finalPrice = document.getElementById('finalPrice')
+
+
+// console.log(getImage);
+
+//  console.log(cartData);
+//  console.log(displaycartData);
+
+
+
+ displaycartData.forEach(items =>{
+    //  console.log(items);   
+     cartDataItems(items);
+   
+ })
+
+ function cartDataItems(items){
+    cartData.forEach(items => {
+    //  console.log(items);
+
+//     console.log(cartData[0].productId);
+//     console.log(displaycartData[0].id)
+//    console.log(displaycartData.length);
+
+var image = [];
+var title = [];
+var price = [];
+
+    for(var i = 0;i<displaycartData.length;i++){
+        for(var j = 0; j<cartData.length;j++){
+             if(cartData[j].productId == displaycartData[i].id ){
+        //  console.log(displaycartData[i].title);
+       
+        //  console.log(displaycartData[i].imgUrl[0]);
+
+         var imageData = displaycartData[i].imgUrl[0];
+         image.push(imageData);
+         
+         title.push(displaycartData[i].title);
+         price.push(displaycartData[i].price);
+
+     }
+    }
+    }
+    
+//  console.log(image)    
+//  console.log(title);
+//  console.log(price);
+
+//=================================================
+var  counterI ={}
+for(var j of image){
+    counterI[j] = counterI[j]+1 || 1;
+    
+}
+console.log(counterI);
+
+
+var  counterJ ={}
+for(var j of title){
+    counterJ[j] = counterJ[j]+1 || 1;
+}
+console.log(counterJ)
+
+var  counterK ={}
+for(var j of price){
+    counterK[j] = counterK[j]+1 || 1;   
+}
+console.log(counterK)
+
+var nARRimg = []
+var nARRtitle = []
+var nARRprice = []
+
+for(k in counterI){
+    console.log(k)
+  nARRimg.push(k)
+ }
+ for(k in counterJ){
+    console.log(k)
+  nARRtitle.push(k)
+}
+    var priceTotal = []
+    var sumPrice = 0
+for(k in counterK){
+    console.log(k)
+    nARRprice.push(k)
+    sumPrice+=k*(counterK[k])
+}
+priceTotal.push(sumPrice)
+var nARRcount = []
+var totalItem = []
+var sum = 0
+for(k in counterJ){
+    console.log(k)
+  nARRcount.push(counterJ[k])
+  sum+= counterJ[k]
+}
+totalItem.push(sum)
+     
+//=================================================
+
+ var cartDataFinal_image = localStorage.setItem( "imageDF",JSON.stringify(nARRimg));
+ var cartDataFinal_title = localStorage.setItem( "titleDF",JSON.stringify(nARRtitle));
+ var cartDataFinal_price = localStorage.setItem( "priceDF",JSON.stringify(nARRprice));
+ var cartDataFinal_count = localStorage.setItem('countDF',JSON.stringify(nARRcount))
+ var cartDataFinal_total = localStorage.setItem('total',JSON.stringify(totalItem))
+ var cartDataFinal_totalPrice = localStorage.setItem('totalPrice',JSON.stringify(priceTotal))
+ 
+ });
+
+ }
+
+ var getImage = JSON.parse(localStorage.getItem("imageDF"));
+ var getTitle = JSON.parse(localStorage.getItem("titleDF"));
+ var getPrice = JSON.parse(localStorage.getItem("priceDF"));
+ var getCount = JSON.parse(localStorage.getItem("countDF"))
+ var getTotal = JSON.parse(localStorage.getItem('total'))
+ var getTotalPrice = JSON.parse(localStorage.getItem('totalPrice'))
+ 
+ console.log(getImage);
+ console.log(getTitle);
+ console.log(getPrice);
+
+//===========================display products from add to cart=========================
+
+var main = document.getElementById("imageDiv");
+
+var i = 0;
+while(i<getImage.length){
+var img = document.createElement("img");
+img.src = getImage[i];
+
+var title = document.createElement("p");
+title.textContent = getTitle[i];
+
+var price = document.createElement("p");
+price.textContent = "Product Price :"+" "+getPrice[i];
+
+var counter = document.createElement('p');
+counter.textContent = "Product Count :"+" "+getCount[i]
+
+main.append(img,title,price,counter);//=======================
+i++;
+}
+
+var tot = document.createElement('h2')
+tot.textContent = "No. of products in cart :"+" "+getTotal
+counting.append(tot)//====================
+
+var priceTot = document.createElement('h2')
+priceTot.textContent = "Total Amount: "+" "+getTotalPrice
+finalPrice.append(priceTot)//============================
+
+
+</script>

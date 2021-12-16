@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+var arr = [{userEmail:'kaya',productId:'ME00105'},{userEmail:'kaya',productId:'ME06105'},{userEmail:'kaya',productId:'ME07105'},{userEmail:'kaya',productId:'ME06105'}]
+
+localStorage.setItem('CartItems',JSON.stringify(arr))
+
+var obj = {emai:'kaya', login:'true',name:''}
+
+localStorage.setItem('userDetail',JSON.stringify(obj))
+
+window.location.href = 'json_data.html'
+</script>
