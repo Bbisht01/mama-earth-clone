@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+    <div id="signupCont">
+        <a href="login.html"><div id="signupCont-icn"><span class="iconify" data-icon="ant-design:arrow-left-outlined"></span></div></a>
+        <div id="signupContent">
+
+            <h3>Signup for the Goodness Inside</h3>
+
+            <input id="signupContent-inp-a" class="signupContent-inp" type="text" placeholder="Phone Number">            
+            <input id="signupContent-inp-c" class="signupContent-inp" type="text" placeholder="Email">
+            <input id="username" class="signupContent-inp" type="text" placeholder="username">           
+            <input id="signupContent-inp-d" class="signupContent-inp" type="password" placeholder="password">
+            <div id="signup-btn">
+              <button onclick="Register()">SignUp</button>
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
+<script>
+
+   async function Register(){
+
+        let signUp_data = {
+            name : "",
+            email : document.getElementById("signupContent-inp-c").value,
+            password : document.getElementById("signupContent-inp-d").value,           
+            mobile : document.getElementById("signupContent-inp-a").value,
+            username : document.getElementById("username").value,           
+            description : ""            
+        };
+
+        signUp_data = JSON.stringify(signUp_data);
+        console.log(signUp_data);
+
+        let register_api = `https://masai-api-mocker.herokuapp.com/auth/register`;
+
+
+        // Body-Send data to body
+
+       let response = await fetch(register_api,{
+            method: "POST",
+            body:signUp_data,
+            // More extra info about my request
+            headers:{
+                "Content-Type": "application/json"
+            },
+        });
+
+        let data = await response.json();
+        console.log(data);        
+            alert(data.message);
+            window.location.href="login.html";         
+        
+    }
+
+
+</script>
