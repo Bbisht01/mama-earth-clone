@@ -180,7 +180,7 @@ p {
 
 /* .....................................CARSOULES................................... */
 .bestsl {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 450px;
   width: 35%;
   margin-top: 50px;
@@ -188,7 +188,7 @@ p {
   vertical-align: top;
 }
 .bestsr {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 62%;
   margin-top: 50px;
   display: inline-block;
@@ -223,7 +223,7 @@ p {
   display: flex;
 }
 .bestsr {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   position: relative;
 }
 

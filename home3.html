@@ -274,7 +274,40 @@
         </div>
       </div>
     </div>
-    <!-- <div id="footer"></div> -->
+
+    <div class="main">
+      <div class="bestsl">
+        <p class="bs">Onion Range</p>
+        <p class="bst">
+          Explore 100% toxin-free and safe Onion Range for Hair Fall, formulated
+          with the goodness of natural ingredients and no harmful chemicals.
+        </p>
+        <button class="bstb">VIEW ALL</button>
+      </div>
+      <div class="bestsr">
+        <div class="wrapper myContainer">
+          <div id="itemCarousel2" class="carousel owl-carousel"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="bestsl">
+        <p class="bs">Vitamin C Range</p>
+        <p class="bst">
+          Explore 100% toxin-free and safe Vitamin C Range for Glowing and
+          Radiant Skin, formulated with the goodness of natural ingredients and
+          no harmful chemicals
+        </p>
+        <button class="bstb">VIEW ALL</button>
+      </div>
+      <div class="bestsr">
+        <div class="wrapper myContainer">
+          <div id="itemCarousel3" class="carousel owl-carousel"></div>
+        </div>
+      </div>
+    </div>
+
     <div class="poster">
       <img width="100%" src="poster.png.png" />
     </div>
@@ -300,6 +333,8 @@
     // <!-- ..............................SECOND CARSOULES...................................... -->
     const data = JSON.parse(localStorage.getItem("mamaEarthProducts")) || [];
     const itemCarousel = document.getElementById("itemCarousel");
+    const itemCarousel2 = document.getElementById("itemCarousel2");
+    const itemCarousel3 = document.getElementById("itemCarousel3");
     data.map((item) => {
       createCard(
         item.title,
@@ -307,10 +342,39 @@
         item.category,
         item.price,
         item.id,
-        item.rating
+        item.rating,
+        1
+      );
+
+      createCard(
+        item.title,
+        item.imgUrl[0],
+        item.category,
+        item.price,
+        item.id,
+        item.rating,
+        2
+      );
+
+      createCard(
+        item.title,
+        item.imgUrl[0],
+        item.category,
+        item.price,
+        item.id,
+        item.rating,
+        3
       );
     });
-    function createCard(title, imgUrl, category, price, id, rating) {
+    function createCard(
+      title,
+      imgUrl,
+      category,
+      price,
+      id,
+      rating,
+      selectItem
+    ) {
       const div = document.createElement("div");
       div.setAttribute("class", "myCard card card-1");
       div.innerHTML = `<img
@@ -328,8 +392,15 @@
                   </p>
                   <button>Add To Cart</button>
                 `;
-
-      itemCarousel.append(div);
+      if (selectItem == 1) {
+        itemCarousel.append(div);
+      } else if (selectItem == 2) {
+        itemCarousel2.append(div);
+      } else if (selectItem == 3) {
+        itemCarousel3.append(div);
+        console.log(itemCarousel3);
+      }
+      console.log(selectItem);
     }
     $("#itemCarousel").owlCarousel({
       margin: 20,
@@ -342,9 +413,33 @@
         },
       },
     });
-    $(".carousel").carousel({
-      interval: 1000,
+
+    $("#itemCarousel2").owlCarousel({
+      margin: 20,
+      loop: false,
+      autoplay: false,
+      responsive: {
+        1000: {
+          items: 3,
+          nav: true,
+        },
+      },
     });
+
+    $("#itemCarousel3").owlCarousel({
+      margin: 20,
+      loop: false,
+      autoplay: false,
+      responsive: {
+        1000: {
+          items: 3,
+          nav: true,
+        },
+      },
+    });
+    // $(".carousel").carousel({
+    //   interval: 1000,
+    // });
     // ..............................................................................
   </script>
 </html>
