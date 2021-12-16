@@ -1,10 +1,14 @@
+*{
+    font-family: 'Lato', sans-serif;
+font-family: 'Roboto', sans-serif;
+}
 #signupCont{
     margin: auto;
     margin-top: 150px;
     border : 1px solid gray;
     border-radius: 2%;
-    height: 450px;
-    width: 350px;
+    height: 500px;
+    width: 380px;
     margin-left: 38%;
     position: fixed;
 }
@@ -18,10 +22,11 @@
     width: 30px;
     height: 30px;
     font-size: 25px;
-    margin-top: 5px;
+    
     color: grey;
+    margin-top: 14px;
+    margin-right: 10px;
      
-   
 }
 #signupContent{
     width: 90%;
@@ -33,22 +38,25 @@
 }
 
 #signupContent > h3{
-    color: #20b9f1;
+    color: #1aa7da;
     text-align: center;
+   margin-left: 13px;
+    margin-bottom: 35px;
+    margin-top: -22px;
+    font-size: 22px;
+    font-weight: 100;
 }
 #signupContent > input{
-    margin-top: 30px;
-    width: 95%;
     border-radius: 2%;
-    border: 0.3px solid grey;
-    height: 30px;
-    outline: none;
+    border: 0.3px solid white;
     padding-left: 10px;
+    border:none;
+    outline:none;
+    
 }
 
-
 #signup-btn button{
-    background-color: #20b9f1;    
+    background-color: #1a97c4;    
     height: 30PX;
     color: white;
     width: 100%;
@@ -56,14 +64,27 @@
     margin-top: 15PX;
     text-align:center; 
     border: none;
-   
+   font-size: 16px;
+   font-weight: 200;   
 }
 
-
+fieldset {
+    border: 1px solid silver;
+    margin-bottom: 20px;
+    
+}
+fieldset>legend{
+    color:rgb(125, 119, 119)
+}
+fieldset>input{
+    border:none;
+    outline:none;
+    width:100%;
+    height: 100%;
+}
 /* #signup-btn > button {   
     color: white;
     background-color: none;
     text-decoration: none;
     padding-top: 5px;
 } */
-

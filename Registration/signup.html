@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <link rel="stylesheet" href="signup.css">
 </head>
@@ -15,14 +18,31 @@
         <div id="signupContent">
 
             <h3>Signup for the Goodness Inside</h3>
+            <fieldset >
+                 <input id="signupContent-inp-a" class="signupContent-inp" type="text" placeholder="Phone Number"> 
+                <legend>Phone Number</legend>
+                
+              </fieldset>
 
-            <input id="signupContent-inp-a" class="signupContent-inp" type="text" placeholder="Phone Number">            
-            <input id="signupContent-inp-c" class="signupContent-inp" type="text" placeholder="Email">
-            <input id="username" class="signupContent-inp" type="text" placeholder="username">           
-            <input id="signupContent-inp-d" class="signupContent-inp" type="password" placeholder="password">
+              <fieldset>
+                <input id="signupContent-inp-c" class="signupContent-inp" type="text" placeholder="Email">
+               <legend>Email</legend>
+               </fieldset>
+
+               <fieldset>
+                <input id="username" class="signupContent-inp" type="text" placeholder="username">
+               <legend>Username</legend>
+               </fieldset>
+
+               <fieldset>
+                <input id="signupContent-inp-d" class="signupContent-inp" type="password" placeholder="password">
+               <legend>Password</legend>
+               </fieldset>
+
             <div id="signup-btn">
               <button >SignUp</button>
             </div>
+
 
         </div>
 
