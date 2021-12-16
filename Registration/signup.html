@@ -5,64 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #container{            
-    display: flex;
-    width: 60%;
-    border: 1px solid red;
-    margin: auto;
-}
-form{
-    width: 60%;
-    
-}
-#register-form{
-    width: 100%;
-    line-height: 2;
-    border: 1px solid red;
-    
-}
-    </style>
-    
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <link rel="stylesheet" href="signup.css">
 </head>
 <body>
-    <div id="container">
-        <div id="register-form">
-            <h2>Signup Form</h2>
-        <form action="">
-            <input type="text" id="name" placeholder="Name">
-            <input type="text" id="email" placeholder="Email">
-            <input type="text" id="password" placeholder="password">
-            <input type="text" id="username" placeholder="Username">
-            <input type="text" id="mobile" placeholder="Mobile No.">
-            <input type="text" id="description" placeholder="Description">
-        </form>
-        <button onclick="Register()">SignUp</button>
+
+    <div id="signupCont">
+        <a href="login.html"><div id="signupCont-icn"><span class="iconify" data-icon="ant-design:arrow-left-outlined"></span></div></a>
+        <div id="signupContent">
+
+            <h3>Signup for the Goodness Inside</h3>
+
+            <input id="signupContent-inp-a" class="signupContent-inp" type="text" placeholder="Phone Number">            
+            <input id="signupContent-inp-c" class="signupContent-inp" type="text" placeholder="Email">
+            <input id="username" class="signupContent-inp" type="text" placeholder="username">           
+            <input id="signupContent-inp-d" class="signupContent-inp" type="password" placeholder="password">
+            <div id="signup-btn">
+              <button onclick="Register()">SignUp</button>
+            </div>
+
+        </div>
+
     </div>
-</div>
+    
 </body>
 </html>
 <script>
 
-    // Api-Link-https://masai-api-mocker.herokuapp.com/
-
-    // Register-https://masai-api-mocker.herokuapp.com/auth/register
-
    async function Register(){
 
-       
-        // 1-get all the input values
-        // 2-store it in an Object 
-        // 3-convert the object to JSON
-        // 4-send data to server
-
         let signUp_data = {
-            name : document.getElementById("name").value,
-            email : document.getElementById("email").value,
-            password : document.getElementById("password").value,
-            username : document.getElementById("username").value,
-            mobile : document.getElementById("mobile").value,
-            description : document.getElementById("description").value
+            name : "",
+            email : document.getElementById("signupContent-inp-c").value,
+            password : document.getElementById("signupContent-inp-d").value,           
+            mobile : document.getElementById("signupContent-inp-a").value,
+            username : document.getElementById("username").value,           
+            description : ""            
         };
 
         signUp_data = JSON.stringify(signUp_data);
@@ -83,115 +61,11 @@ form{
         });
 
         let data = await response.json();
-        console.log(data);
-        // console.log(data.response);
-
-        // alert(data.message);
-        //    window.location.href="login.html";
-
-        // if(data==false){
+        console.log(data);        
             alert(data.message);
-            window.location.href="login.html";
-        // } 
+            window.location.href="login.html";         
         
-        // else{
-        //    alert(data.message);
-        //    window.location.href="login.html";
-        //     // document.getElementById("error").textContent=data.message;
-        // }
     }
-
-// async function Login(){
-// let login_data = {
-//     username : document.getElementById("login-username").value,
-//     password : document.getElementById("login-password").value,    
-// };
-
-// login_data = JSON.stringify(login_data);
-// console.log(login_data);
-
-// let login_api = `https://masai-api-mocker.herokuapp.com/auth/login`;
-
-
-// // Body-Send data to body
-
-// let response = await fetch(login_api,{
-//     method: "POST",
-
-//     body:login_data,
-
-
-//     // More extra info about my request
-//     headers:{
-//         "Content-Type": "application/json"
-//     },
-// });
-
-// let data = await response.json();
-// let name=document.getElementById("login-username").value;
-// console.log(data);
-
-// console.log(data)
-//         if (data.error==false){
-//             userData(name,data.token)
-//            // window.location.href="sucs.html"
-//             //profileDetails(name,data.token)
-
-//         }else{
-//             document.getElementById("error").textContent=data.message;
-//         }
-// }
-
-
-// async function getProfile(username,token){
-
-// let getProfile_api = `https://masai-api-mocker.herokuapp.com/user/${username}`;
-
-// // Body-Send data to body
-
-// let response = await fetch(getProfile_api,{
-    
-//     // More extra info about my request
-//     headers:{
-//         "Content-Type": "application/json",
-
-//         Authorization: `Bearer ${token}`,
-//     },
-// });
-
-// let data = await response.json();
-// console.log(data);
-
-// }
-
-// async function userData(name,token){
-//         console.log(name,token)
-//         let url=`https://masai-api-mocker.herokuapp.com/user/${name}`
-
-//         let res=await fetch(url,{
-//             headers:{
-//                 "Content-Type":"application/json",
-//                 "Authorization": `Bearer ${token}`
-//             },
-//         })
-
-//         let data= await res.json();
-
-//         //console.log(data)
-//         console.log(data)
-//         let username=data.name;
-//         let email=data.email;
-//         //console.log(username,email);
-//         let user={
-//             login:true,
-//             name:username,
-//             email:email
-//         }
-//         console.log(user)
-//         localStorage.setItem("userDetail",JSON.stringify(user))
-//         window.location.href="sucs.html"
-//     }
-
 
 
 </script>
