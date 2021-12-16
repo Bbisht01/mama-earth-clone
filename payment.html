@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+    <link rel="stylesheet" href="style/payment.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+
+    <div id="payment-A">
+        <div id="payment-A-a">
+            <div id="payment-A-a-1">
+             <h3>Login to see your existing offers </h3>              
+            </div>
+            <div id="payment-A-a-2">
+                <button id="payment-A-a-2-btn">Login/SignUp</button>              
+               </div>
+
+            <div id="userAddress">
+                <form action="">
+
+                <h4>Delivery Address</h4>
+                <div class="userAddress-2-input" id="userAddress-a">
+                    <input id="userAddress-FN" type="text" placeholder="First Name*"> 
+                    <input id="userAddress-LN" type="text" placeholder="Last Name*">
+                </div>
+                <div class="userAddress-2-input" id="userAddress-b">
+                    <input id="userAddress-EI" type="text" placeholder="Email ID*"> 
+                    <input id="userAddress-PN" type="text" placeholder="Phone Number*">                    
+                </div>
+                <div class="userAddress-3-input" id="userAddress-c">
+                    <input id="userAddress-PC" type="text" placeholder="PIN Code"> 
+                    <input id="userAddress-Ci" type="text" placeholder="City*"> 
+                    <input id="userAddress-St" type="text" placeholder="State*">
+                </div>
+                <div class="userAddress-1-input" id="userAddress-d">
+                    <input id="userAddress-Ad" type="text" placeholder="Address(House NO, Building,Street,Area)*">
+                </div>
+
+
+                <div id="userAddress-type">
+                    <p>Select the type of the Address</p>
+                    <div>Home</div>
+                    <div>Work</div>
+                    <div>Other</div>
+                </div>
+
+                </form>
+            </div>
+
+            <div id="payment-method">
+                <h3>Choose Payment Method</h3>
+                <div id="payment-method-box">
+                    <div id="payment-method-box-a">
+                        <div><h3><i class="fas fa-credit-card"></i>Debit / Credit card</h3></div>
+                        <div><p>  UPI</p></div>
+                        <div><p>  Wallets</p></div>
+                        <div><p>  Netbanking</p></div>
+                        <div><p>  Cash on Delivery</p></div>
+                        <div id="payment-method-box-a-bottom">
+                        <span><p>Powered by<img src="style/download.svg" alt=""></p></span>
+                        </div>
+                    </div>
+                    <div id="payment-method-box-b">
+
+                        <h3>Enter Credit / Debit card details</h3>
+
+                        <div>
+                            <p>Card Number</p>
+                            <input id="cardNo"  type="text" placeholder="xxxx xxxx xxxx xxxx">
+                        </div>
+                        <div id="card-C-M">
+                            <div>
+                                <span><p>Expiry</p></span>                                
+                                <input id="date" type="text" placeholder="MM / YY">
+                            </div>
+                            <div id="cvvHolder">
+                                <span><p>CVV</p></span>
+                                <input id="cvv" type="text" placeholder="CVV">
+                            </div>
+
+                            
+                            <button id="paymentBTN" onclick="makePayment()">PROCEED TO PAY</button>
+                            
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>            
+            
+
+        </div>
+    </div>
+</div>
+
+
+<div id="footerDiv"></div>
+
+   
+
+    
+</body>
+</html>
+
+<script type="module">
+
+    function makePayment(){
+        var FN = document.getElementById("userAddress-FN").value.length
+        var LN = document.getElementById("userAddress-LN").value.length
+        var EI = document.getElementById("userAddress-EI").value.length
+        var PN = document.getElementById("userAddress-PN").value.length
+        var PC = document.getElementById("userAddress-PC").value.length
+        var Ci = document.getElementById("userAddress-Ci").value.length
+        var St = document.getElementById("userAddress-St").value.length
+        var Ad = document.getElementById("userAddress-Ad").value.length
+        var CN = document.getElementById("cardNo").value.length
+        var Da = document.getElementById("date").value.length
+        var CV = document.getElementById("cvv").value.length
+
+
+        if(FN ==0 || LN ==0 ||EI ==0 ||PN >10 || PN < 10||PC ==0 ||Ci ==0 ||St ==0 ||Ad ==0 ||CN >16 || CN < 16||Da >4 || Da < 4||CV >3 || CV < 3 ){
+             
+            
+            
+            if(PN >10 || PN < 10){ 
+                // document.getElementById("userAddress-PN").style.outline = red;                          
+                return alert("ENTER VALID NUMBER");
+            }
+            if(CN >16 || CN < 16){
+                return alert("ENTER VALID CARD NUMBER");
+            }
+            
+            if(Da >4 || Da < 4){
+                return alert("ENTER VALID EXPIRY DATE");
+            }
+            if(CV >3 || CV < 3){
+                return alert("ENTER VALID CVV");
+            }
+
+            return alert("ENTER VALID DETAILS!!!")
+
+        } 
+        else{
+            
+            // window.location.href
+        }
+    }
+
+
+    import footer from "./components/footer.js"
+
+    let FD = document.getElementById("footerDiv");
+
+    FD.innerHTML = footer();
+    // console.log(footer);
+
+
+  
+</script>
