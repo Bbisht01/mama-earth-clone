@@ -142,7 +142,7 @@
 </html>
 <script>
 
- //======================= Display Products from local Storage Start============================//
+ //===================== Display Products from local Storage Start============================//
 
 var data = JSON.parse(localStorage.getItem("mamaEarthProducts"));
 // var data = JSON.parse(localStorage.getItem("mamaEarthProducts")) || [];
@@ -166,10 +166,10 @@ function showProducts(data){
             `
         });
     }
- //============================ Display Products from local Storage END=============================//    
+ //=================== Display Products from local Storage END=============================//    
 
 
- //============================ Add Products To Cart Start====================================//
+ //======================= Add Products To Cart Start==================================//
 
 
  var userDetails = JSON.parse(localStorage.getItem("userDetail"));
@@ -212,52 +212,15 @@ function showProducts(data){
               cart.push(obj);
               localStorage.setItem("CartItems", JSON.stringify(cart));
               
+              
           }
  }
 
+//============================ Add Products To Cart End=================================// 
 
 
 
-//  function addToCart(id,email)
-//      {
-//          console.log(id);
-         
-//          var obj = {
-//              userId: email,
-//              productId:id,
-//          }         
-
-//          var flag = false;
-
-//          for(var i=0;i<cart.length;i++){
-//              if(cart[i].email == email && cart[i].id == id){
-//                  flag = true;
-//                  break;
-//              }
-
-//          }
-//           if(flag){
-//               alert("This item is already in the cart");
-//           } else {
-//               cart.push(obj);
-//               localStorage.setItem("CartItems", JSON.stringify(cart));
-
-
-//           }
-//      }
-
-
-
-
-
-//============================ Add Products To Cart Start====================================// 
-
-
-
- //================================== sort function=========================================//
- 
-
- 
+ //================================= Sort function=========================================//
  
  
  function sortBy()
