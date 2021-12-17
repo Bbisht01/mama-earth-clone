@@ -97,11 +97,10 @@ p{
 #gift{
     margin-left: 430px;
 }
-#nav3  ul{
+ul{
     display: inline-block;
-    vertical-align: top; 
+   vertical-align: top; 
 }
-
 li{
     list-style: none;
     color: grey;
@@ -128,7 +127,10 @@ li{
     color: grey;
     Z-index:10;
     font-family: 'Lato',sans-serif;
-    font-size: 13px;   
+    font-size: 13px;
+    margin-top: 10px;
+    /* font-weight: bold; */
+   
  }
  p{
      font-weight: bold;
@@ -150,6 +152,10 @@ li{
     background-color:white;
     /* #F7D6D0 */
  }
+
+
+
+
 
  .bestsl{
     border: 1px solid red;
@@ -228,10 +234,7 @@ width: 100%;
    font-size:11px;
    font-weight: bold;
 }
-/* #babita > ul{
-     display: flex;
-     flex-direction: row;
- } */
+ 
 
 
      

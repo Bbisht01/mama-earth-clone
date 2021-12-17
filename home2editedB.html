@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+      data-auto-replace-svg="nest"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+  </head>
+  <style>
+
+body{
+        /* font-family: 'Lato'; */
+         font-family: 'Roboto', sans-serif; 
+}
+
+/* =============================css page(navbar.css) ==== */
+.PC-navbar-common #nav1 {
+  /* border: 1px solid red; */
+  height: 35px;
+  width: 100%;
+  background-color: #d4424c;
+}
+.PC-navbar-common #nav1 a {
+  color: white;
+    cursor: pointer;   
+    padding-bottom: 10px;     
+    font-size: 1.3rem !important;
+    font-weight: 500 !important;
+    font-family: Lato;
+    letter-spacing: 1.5px;  
+  font-size: 15px;
+  color: white;
+  display: inline-block;
+  margin-top: 5px;
+}
+.PC-navbar-common #nav1 p {
+  margin-left: 20px;
+}
+.PC-navbar-common #nav1 #navt {
+  margin-left: 200px;
+}
+.PC-navbar-common #nav1 .fa-user {
+  display: inline-block;
+  color: white;
+  margin-left: 10%;
+  margin-top: 5px;
+  font-size: 16px;
+}
+/* .................................................nav2........................................... */
+
+.PC-navbar-common #nav2 {
+  border: 1px solid lightgray;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  gap: 2%;
+  padding-top: 10px
+}
+.PC-navbar-common  #nav2 #btn {
+  width: 16%;
+  height: 38px;
+  background-color: #00afef;
+  color: white;
+  border: none;
+  font-size: 19px; 
+  border: none;
+  float: right;
+  /* border: 1px solid black; */
+}
+
+#nav2 .cartIcon {
+    width: 6%;
+    margin-left: 62%;
+    margin-top: 0.2%;
+    display: flex;
+    align-items: center;
+    height: 40px;    
+    color: rgb(92, 92, 92);
+    font-size: 1.6rem;
+    font-weight: 500;
+    /* border: 1px solid red;     */
+    
+}
+#cartID{
+  margin-right: 6%;
+}
+
+.cartIcon>p{
+  margin-top: 25%;
+  margin-left:-0px;
+  font-weight: 500;
+}
+#nav2 .loginIcon{
+    width: 6%; 
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    height: 40px;    
+    /* border: 1px solid red; */
+    
+}
+#nav2 .loginIcon p{
+    margin-left: 5%;
+    margin-top: 28%;
+    color: rgb(92, 92, 92);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.PC-navbar-common  #nav2 .iconify {
+  color: #00afef;
+  font-size: 25px;
+  margin-top: 10px;
+  /* border: 1px solid black;   */
+}
+.PC-navbar-common #nav2s {
+  width: 45%;
+  height: 40px;
+  border: 1px solid lightgray; 
+  /* margin-top: 10px; */
+  display: inline-block;
+  /* margin-bottom: 70px; */
+  position: absolute;
+  margin-top: 10px;
+  border-radius: 5px;
+  border-radius: 5px;  
+  margin-left: 22%;
+  margin-top: 8px;
+  padding-left: 20px;
+}
+#logo {
+  height: 30px;
+  width: 150px;
+  margin-left: 100px;
+  display: inline-block;
+  /* margin-bottom: 80px; */
+  /* margin-top:10px; */
+}
+.PC-navbar-common #nav2 #logo {
+  height: 22px;
+  width: 55%;  
+  margin-top: 5%;
+  /* border: 1px solid green;   */
+}
+#btn {
+  width: 97px;
+  height: 38px;
+  background-color: #00afef;
+  color: white;
+  border: none;
+  font-size: 19px;
+
+  /* margin-top: 20px; */
+}
+#srch {
+  width: 500px;
+  height: 35px;
+  /* margin-left:100px; */
+  border: 1px solid lightgray;
+  border: none;
+
+  /* margin-top: 10px; */
+}
+.fa-shopping-cart {
+  margin-left: 65%;
+  color: #00afef;
+  margin-top: 20px;
+}
+.fa-user-alt {
+  color: #00afef;
+  margin-left: 5%;
+  margin-top: 10px;
+}
+
+/*---------------------------------------Nav 3--------------------------------------------*/
+
+#nav3 {
+  background-color: white;
+  width: 100%;
+  height: 35px;
+  color: black;
+  border: 1px solid hsl(0, 0%, 83%), 83%);
+}
+#homet {
+  margin-left: 100px;
+  margin-top: 12px;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #00afef;
+  display: inline-block;
+}
+.hometxt {
+  margin-top: 12px;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: grey;
+  display: inline-block;
+}
+#beauty {
+  margin-left: 70px;
+}
+#hair {
+  margin-left: 160px;
+}
+#face {
+  margin-left: 230px;
+}
+#body {
+  margin-left: 310px;
+}
+#gift {
+  margin-left: 430px;
+}
+ul {
+  display: inline-block;
+  vertical-align: top;
+}
+li {
+  list-style: none;
+  color: grey;
+  font-size: 12px;
+  margin-top: 15px;
+}
+#shampoo {
+  color: grey;
+  text-decoration: none;
+  font-weight: lighter;
+}
+.bold {
+  color: black;
+  font-size: 17px;
+}
+.blue {
+  color: #00afef;
+  font-size: 17px;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  color: grey;
+  z-index: 10;
+  
+  font-size: 13px;
+  margin-top: 10px;
+  /* font-weight: bold; */
+}
+p {
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 400px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  border-top: solid #00afef;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  background-color: white;
+  /* #F7D6D0 */
+}
+
+.bestsl {
+  border: 1px solid red;
+  height: 450px;
+  width: 25%;
+  margin-top: 80px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 3%;
+}
+.bestsr {
+  border: 1px solid blue;
+  /* position: relative; */
+  width: 63%;
+  /* height: 500px;  */
+  margin-top: 50px;
+  /* display: inline-block; */
+  /* vertical-align: top;  */
+  margin-right: 7%;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 1%;
+  float: right;
+}
+img {
+  height: 200px;
+  width: 200px;
+  margin-left: 25%;
+}
+.bs {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.bst {
+  width: 260px;
+  margin-left: 95px;
+  font-size: 17px;
+  margin-top: 27px;
+}
+.bstb {
+  margin-left: 35%;
+  font-size: 20px;
+  margin-top: 27px;
+  background-color: #00afef;
+  color: white;
+  height: 46px;
+  width: 130px;
+  border: none;
+  border-radius: 5px;
+}
+.main {
+  display: flex;
+}
+.all {
+  border: 10px solid black;
+  height: 300px;
+  width: 100px;
+}
+.title {
+  text-align: center;
+}
+.rating {
+  text-align: center;
+}
+.price {
+  text-align: center;
+}
+.hbtn {
+  margin-left: 2%;
+  width: 97%;
+  height: 40px;
+} 
+/* #cartDiv{
+  height: 100vh;
+  width: 35vw;
+  border: 1px solid red;
+  background-color: whitesmoke;
+  margin-left: 95%;
+  margin-top: -29%;
+
+} */
+
+  </style>
+  <body>
+      <div class="PC-navbar-common">
+    <div id="container"></div>
+    <div id = "nav1">
+        <a href = ""><p>Asia's first brand with MADE SAFE certified products</p></a>
+        <a href = ""><p id = "navt">Free Shippping above 399 | COD Available | Ertra 5% OFF
+            on prepaid orders | Shop Now
+        </p></a>
+        <i class="far fa-user"></i>
+    </div>
+    <div id = "nav2">
+        <div>
+        <img id = "logo"  src = "https://media.loylty.com/movies/bannerimg_20210730184309563.jpg" href ="home2editedB.html">
+        </div>
+        
+        <div id = "nav2s">
+            <input id = "srch" type = "text" placeholder = "Search for products.."><button id = "btn"><i class="fas fa-search"></i>Search</button>
+        </div>
+        <div class="cartIcon" onclick="cartHover()">
+            <span class="iconify" data-icon="bytesize:cart" id="cartID"></span><p>Cart</p> 
+        </div> 
+        <div  class="loginIcon">
+            <span class="iconify" data-icon="bytesize:user"></span><p>Login</p>  
+        </div>          
+        
+    </div>
+    <div id = "nav3">
+        <p id="homet">HOME</p>
+        
+        <div class="dropdown"> <p>BABY</p> <div class="dropdown-content">
+            <ul>
+                <li class="bold">Explore</li>
+                <li>New Launchers</li>
+                <li>Best Sellers</li>
+                <li>combos</li>
+                <li>Gift Packs</li>
+            </ul>
+            
+            <ul>
+                <li class="bold">Baby</li>
+                <li>Baby Shampoo</li>
+                <li>Baby Oralcare</li>
+                <li>Baby Oil</li>
+                <li>Baby Skin</li>
+                <li>Baby Bath</li>
+                <li>Baby Diaper</li>
+            </ul>
+
+            <ul>
+                <li class="blue">See All</li>
+            </ul>
+        </div> </div>
+
+
+        <div  id="beauty" class="dropdown"> <p>BEAUTY</p> <div class="dropdown-content">
+            <ul>
+                <li class="bold">Explore</li>
+                <li>New Launchers</li>
+                <li>Best Sellers</li>
+                <li>combos</li>
+                <li>Gift Packs</li>
+            </ul>
+    
+            <ul>
+                <li class="bold">Beauty</li>
+                <li>Face</li>
+                <li>Hair</li>
+                <li>Body</li>
+            </ul>
+
+            <ul>
+                <li class="blue">See All</li>
+            </ul>
+        </div> </div>
+
+
+        <div  id="hair" class="dropdown"> <p>HAIR</p> <div class="dropdown-content">
+            <ul>
+                <li class="bold">Explore</li>
+                <li>New Launchers</li>
+                <li>Best Sellers</li>
+                <li>combos</li>
+                <li>Gift Packs</li>
+            </ul>
+    
+            <ul>
+                <li class="bold">Hair</li>
+                <a id="shampoo" href="Products.html"><li>Shampoo</li></a>
+                <li>conditioner</li>
+                <li>Hair Oil</li>
+                <li>Hair Mask</li>
+                <li>Hair Serum</li>
+            </ul>
+
+            <ul>
+                <li class="blue">See All</li>
+            </ul>
+        </div> </div>
+
+
+        <div  id="face" class="dropdown"> <p>FACE</p> <div class="dropdown-content">
+            <ul>
+                <li class="bold">Explore</li>
+                <li>New Launchers</li>
+                <li>Best Sellers</li>
+                <li>combos</li>
+                <li>Gift Packs</li>
+            </ul>
+    
+            <ul>
+                <li class="bold">Face</li>
+                <li>Face Wash</li>
+                <li>Face Mask</li>
+                <li>Face Cream</li>
+                <li>Face Serum</li>
+                <li>Face Scrum</li>
+                <li>Face Toner</li>
+                <li>Face Gel</li>
+                <li>Face Sheet Mask</li>
+            </ul>
+
+            <ul>
+                <li class="blue">See All</li>
+            </ul>
+        </div> </div>
+
+
+        <div  id="body" class="dropdown"> <p>BODY</p> <div class="dropdown-content">
+            <ul>
+                <li class="bold">Explore</li>
+                <li>New Launchers</li>
+                <li>Best Sellers</li>
+                <li>combos</li>
+                <li>Gift Packs</li>
+            </ul>
+    
+            <ul>
+                <li class="bold">Bodyy</li>
+                <li>Body Butter</li>
+                <li>Body Wash</li>
+                <li>Body Lotion</li>
+                <li>Body Scrub</li>
+                <li>Hand Cream</li>
+            </ul>
+
+            <ul>
+                <li class="blue">See All</li>
+            </ul>
+        </div> </div>
+
+        <p id="gift" class="hometxt">GIFT PACKS</p>
+        <p class="hometxt">ALL PRODUCTS</p>
+        <p class="hometxt">BLOG</p>
+        <p class="hometxt">PLANT GOODNESS</p>
+        <p class="hometxt">STORE LOCATOR</p>
+    </div>
+</div>
+
+  </body>
+</html>
+<script >
+//   import navbar from "./components/navbar.js";
+
+//   let container = document.getElementById("container");
+
+//   container.innerHTML = navbar();
+
+// =========================Cart Icon====================================
+
+function cartHover(e){
+    console.log(e);
+    // alert("Clicked");
+
+    window.location.href = "cart.html";
+
+}
+
+</script>
