@@ -78,7 +78,7 @@ font-family: 'Roboto', sans-serif;
         }
         #below_nav2{
             width: 230px;
-            height: 280px;
+            height: 265px;
             position: fixed;
             border:2px solid rgb(189, 189, 189);
             margin-left: 1200px;
@@ -87,6 +87,32 @@ font-family: 'Roboto', sans-serif;
             background-color: white;
             padding-left:10px;
         }
+        #addtocart{
+    background-color: #00aeef;
+    color:white;
+    border:none;
+   margin-top: 15px;
+    width:210px;
+    font-size: 17px;
+    height: 25px;
+    font-weight: 100;
+    padding:5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    
+    }
+    #addtocart>img{
+       width:18px;
+       height: 18px;
+      margin-left: 45px;
+       margin-top: 5px;
+    }
+    #addtocart>p{
+        margin-left: 10px;
+        margin-top: 4px;
+    }
+
         #one>p:nth-child(1){
             color: olivedrab;
             font-size: 18px;
@@ -378,9 +404,13 @@ meter::-webkit-meter-optimum-value {
     
     padding-left: 10px;
 }
+
+
     </style>
 </head>
 <body>
+
+    <div id="navbar"></div>
 
     <div id="parentTop">
     <div id="below_nav1">
@@ -426,7 +456,9 @@ meter::-webkit-meter-optimum-value {
             <img src="https://mamaearth.in/static/mamaearth/verified.svg"/>
            </div>
        </div>
+       <div id="addtocart" ><img src="https://mamaearth.in/static/mamaearth/shopping_cart.svg" id="cartimg"><p>Add to Cart</p></div>
     </div>
+    
 </div>
 
 
@@ -517,6 +549,7 @@ meter::-webkit-meter-optimum-value {
 let local = JSON.parse(localStorage.getItem('mamaEarthProducts'))
 
 // console.log(local)
+let cartbtn = document.getElementById('addtocart').addEventListener('click',addingtocart)
 
 let left_up = document.getElementById('left_up')
 let left_up_img = document.getElementById('left_up_img')
@@ -752,6 +785,12 @@ function decrease(){
 }
 console.log(local[0].imgUrl)
 
+let array =  []
+
+function addingtocart(){
+    array.push(local)
+ localStorage.setItem('CartItems',JSON.stringify(array))
+}
 
 
 </script>

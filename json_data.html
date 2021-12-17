@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  var data = [
+    {
+      title:
+        "Onion Shampoo with Onion and Plant Keratin for Hair Fall Control - 250ml",
+      imgUrl: [
+        "https://honasa-mamaearth-production.imgix.net/o/n/onion-hair-shampoo-250ml-with-ingredient_2.jpg?auto=compress&fit=scale&w=400&h=400",
+        "https://honasa-mamaearth-production.imgix.net/o/n/onion-shampoo_3_1__4.jpg?auto=format&fit=crop&w=683&auto=compress",
+        "https://honasa-mamaearth-production.imgix.net/o/n/onion-shampoo_4_4.jpg?auto=format&fit=crop&w=683&auto=compress",
+        "https://honasa-mamaearth-production.imgix.net/o/n/onion-shampoo_6_4.jpg?auto=format&fit=crop&w=683&auto=compress",
+        "https://honasa-mamaearth-production.imgix.net/o/n/onion-shampoo_7_2.jpg?auto=format&fit=crop&w=683&auto=compress",
+        "https://honasa-mamaearth-production.imgix.net/o/n/onion-shampoo_5_4.jpg?auto=format&fit=crop&w=683&auto=compress",
+        "https://honasa-mamaearth-production.imgix.net/o/n/onion-hair-shampoo-250ml_2.jpg?auto=format&fit=crop&w=683&auto=compress",
+      ],
+      description:'Onion Shampoo with Onion and Plant Keratin',
+      category: "Shampoo",
+      price: 349,
+      id: "ME00105",
+      rating: "4.2",
+    },
+    
+  ];
+
+  localStorage.setItem("mamaEarthProducts",JSON.stringify(data));
+  alert("data set to local storage");
+  window.open('IndividualProductPage.html')
+</script>
