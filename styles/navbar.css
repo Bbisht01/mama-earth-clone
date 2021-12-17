@@ -1,5 +1,5 @@
 #nav1{
-    border:1px solid red;
+    
     height:35px;
     width:100%;
     background-color:#d4424c
@@ -19,7 +19,7 @@ p{
 .fa-user{
     display: inline-block; 
     color: white;
-    margin-left:260px;
+    margin-left:20%;
 }
 /* .................................................nav2........................................... */
 
@@ -44,10 +44,10 @@ p{
 #srch{
     width:500px;
     height:30px;
-    margin-left:100px;
+    margin-left:200px;
     border:1px solid lightgray;
 }
-.fa-shopping-cart{
+#nav2 .fa-shopping-cart{
     margin-left: 200px;
     color: #00afef;
 }
@@ -150,7 +150,7 @@ li{
     background-color:white;
     /* #F7D6D0 */
  }
-
+/* -------------------------------------------------carosuel-------------------------------------------- */
  .bestsl{
     border: 1px solid red;
     height:450px;

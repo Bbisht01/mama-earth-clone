@@ -20,7 +20,17 @@ input:focus {
     /* height: 600px; */
     width: 55%;
     /* border: 1px solid red ; */
-    margin-left: 10%;
+    /* margin-left: 10%; */
+    display: inline-block;
+}
+#payment-B{
+    
+    width: 40%;
+    margin-top: 200px;
+    margin-left: 50px;
+    display: inline-block;
+    vertical-align: top;
+    height: 500px;
 }
 
 
@@ -189,4 +199,8 @@ input:focus {
 
 #footerDiv{
     margin-top: 50px;
+}
+.fa-credit-card{
+    color: grey;
+    margin-left: 40px;
 }

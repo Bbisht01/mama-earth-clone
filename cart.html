@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <link rel="stylesheet" href="styles/cart.css">
+</head>
+
+<body>
+    <div id="checkoutMainDiv">
+        <div id="shopingCartDiv">
+            <div class="title">YOUR SHOPPING CART</div>
+        </div>
+                  <label>Item Details</label>
+          
+          <h1 id="noProducts" style="display: none;">No products in cart</h1>
+          <div class="cartSections">
+              <div class="left-section">
+                 
+              </div>
+              
+              <div class="right-section">
+                  <label style="font-weight: bold;font-size: 20px;line-height: 2;color: #6ea30e;">Price Summary</label>
+                  <div class="order-summary">
+                      <div id="amountDiv">Amount </div>
+                      <div class="amt" id="total-price"></div>
+                      <div>Order Discounts</div>
+                      <div style="padding-top: 0px;" class="amt">-&#8377;0.00</div>
+                       <div class="total">Total </div>
+                      <div class="total-amt"><label  id="total-price"></label>
+                      </div>
+                      <div id="incl">(Inclusive of all taxes)</div>
+                  </div>
+                  <button id="checkout" onclick="redirectToPayment()">
+                      Checkout
+                  </button>
+              </div>
+          </div>
+          
+          <button id="cont-shopping" onclick="redirectToProductPage()">
+              Continue Shopping
+          </button>
+      </div>
+</body>
+</html>
+<script src="js/cart.js"></script>
