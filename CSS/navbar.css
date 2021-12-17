@@ -1,0 +1,264 @@
+body{
+        /* font-family: 'Lato'; */
+         font-family: 'Roboto', sans-serif; 
+}
+
+/* =============================css page(navbar.css) ==== */
+.PC-navbar-common #nav1 {
+  /* width: 100%; */
+  background-color: hsl(356, 63%, 55%);
+  border: 1px solid black;
+  /* width: 100vw; */
+  height: 35px; 
+  margin: auto;
+}
+.PC-navbar-common #nav1 a {
+  color: white;
+    cursor: pointer;   
+    padding-bottom: 10px;     
+    font-size: 1.3rem !important;
+    font-weight: 500 !important;
+    font-family: Lato;
+    letter-spacing: 1.5px;  
+  font-size: 15px;
+  color: white;
+  display: inline-block;
+  /* margin-top: 5px; */
+}
+.PC-navbar-common #nav1 p {
+  /* margin-left: 20px; */
+}
+.PC-navbar-common #nav1 #navt {
+  margin-left: 200px;
+}
+.PC-navbar-common #nav1 .fa-user {
+  display: inline-block;
+  color: white;
+  margin-left: 10%;
+  margin-top: 5px;
+  font-size: 16px;
+}
+/* .................................................nav2........................................... */
+
+.PC-navbar-common #nav2 {
+  border: 1px solid lightgray;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  gap: 2%;
+  padding-top: 10px
+}
+.PC-navbar-common  #nav2 #btn {
+  width: 16%;
+  height: 38px;
+  background-color: #00afef;
+  color: white;
+  border: none;
+  font-size: 19px; 
+  border: none;
+  float: right;
+  /* border: 1px solid black; */
+}
+
+#nav2 .cartIcon {
+    width: 6%;
+    margin-left: 62%;
+    margin-top: 0.2%;
+    display: flex;
+    align-items: center;
+    height: 40px;    
+    color: rgb(92, 92, 92);
+    font-size: 1.6rem;
+    font-weight: 500;
+    /* border: 1px solid red;     */
+    
+}
+#cartID{
+  margin-right: 6%;
+}
+
+.cartIcon>p{
+  margin-top: 25%;
+  margin-left:-0px;
+  font-weight: 500;
+}
+#nav2 .loginIcon{
+    width: 6%; 
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    height: 40px;    
+    /* border: 1px solid red; */
+    
+}
+#nav2 .loginIcon p{
+    margin-left: 5%;
+    margin-top: 28%;
+    color: rgb(92, 92, 92);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.PC-navbar-common  #nav2 .iconify {
+  color: #00afef;
+  font-size: 25px;
+  margin-top: 10px;
+  /* border: 1px solid black;   */
+}
+.PC-navbar-common #nav2s {
+  width: 45%;
+  height: 40px;
+  border: 1px solid lightgray; 
+  /* margin-top: 10px; */
+  display: inline-block;
+  /* margin-bottom: 70px; */
+  position: absolute;
+  margin-top: 10px;
+  border-radius: 5px;
+  border-radius: 5px;  
+  margin-left: 22%;
+  margin-top: 8px;
+  padding-left: 20px;
+}
+#logo {
+  height: 30px;
+  width: 150px;
+  margin-left: 100px;
+  display: inline-block;
+  /* margin-bottom: 80px; */
+  /* margin-top:10px; */
+}
+.PC-navbar-common #nav2 #logo {
+  height: 22px;
+  width: 55%;  
+  margin-top: 5%;
+  /* border: 1px solid green;   */
+}
+#btn {
+  width: 97px;
+  height: 38px;
+  background-color: #00afef;
+  color: white;
+  border: none;
+  font-size: 19px;
+
+  /* margin-top: 20px; */
+}
+#srch {
+  width: 500px;
+  height: 35px;
+  /* margin-left:100px; */
+  border: 1px solid lightgray;
+  border: none;
+
+  /* margin-top: 10px; */
+}
+.fa-shopping-cart {
+  margin-left: 65%;
+  color: #00afef;
+  margin-top: 20px;
+}
+.fa-user-alt {
+  color: #00afef;
+  margin-left: 5%;
+  margin-top: 10px;
+}
+
+/*---------------------------------------Nav 3--------------------------------------------*/
+
+#nav3 {
+  background-color: white;
+  width: 100%;
+  height: 35px;
+  color: black;
+  border: 1px solid lightgray;
+  border: 1px solid red;
+}
+#nav3 #homet {
+  margin-left: 100px;
+  margin-top: 12px;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #00afef;
+  display: inline-block;
+  border: 1px solid green;
+}
+#nav3 .hometxt {
+  margin-top: 12px;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: grey;
+  display: inline-block;
+  border: 1px solid red;
+}
+#nav3 #beauty {
+  margin-left: 70px;
+}
+#nav3 #hair {
+  margin-left: 160px;
+}
+#nav3 #face {
+  margin-left: 230px;
+}
+#nav3 #body {
+  margin-left: 310px;
+}
+#nav3  #gift {
+  margin-left: 430px;
+}
+#nav3 ul {
+  display: inline-block;
+  vertical-align: top;
+}
+#nav3 li {
+  list-style: none;
+  color: grey;
+  font-size: 12px;
+  margin-top: 15px;
+}
+#nav3 #shampoo {
+  color: grey;
+  text-decoration: none;
+  font-weight: lighter;
+}
+#nav3  .bold {
+  color: black;
+  font-size: 17px;
+}
+#nav3 .blue {
+  color: #00afef;
+  font-size: 17px;
+}
+
+#nav3 .dropdown {
+  position: absolute;
+  display: inline-block;
+  color: grey;
+  z-index: 10;
+  
+  font-size: 13px;
+  margin-top: 10px;
+  /* font-weight: bold; */
+}
+#nav3 p {
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+#nav3 .dropdown-content {
+  display: none;
+  position: absolute;
+  width: 400px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  border-top: solid #00afef;
+}
+
+#nav3 .dropdown:hover .dropdown-content {
+  display: block;
+  background-color: white;
+  /* #F7D6D0 */
+}
+
+
