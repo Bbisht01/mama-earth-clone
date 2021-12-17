@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+      data-auto-replace-svg="nest"
+    ></script>
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <!-- <link rel="stylesheet" href="styles/cardC.css"> -->
+    <link rel="stylesheet" href="styles/footer.css" />
+
+    <style>
+      * {
+        font-family: "Lato", sans-serif;
+        font-family: "Roboto", sans-serif;
+      }
+      .PC-Product-Page #main {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(4, 24%);
+        width: 85%;
+        margin: auto;
+        /* border: 1px solid red;  */
+        justify-content: space-between;
+        margin-bottom: 50px;
+      }
+      .PC-Product-Page .card {
+        height: 500px;
+        /* background-color: whitesmoke; */
+        padding: 10px 15px;
+        box-sizing: border-box;
+        text-align: center;
+        position: relative;
+        border: 1px solid #e5e5e5;
+        /* border: 1px solid red; */
+        /* margin-left: 20%; */
+      }
+      .PC-Product-Page .card img {
+        width: 100%;
+        height: 250px;
+      }
+      .PC-Product-Page .card button {
+        position: absolute;
+        bottom: 10px;
+        left: 5%;
+        width: 90%;
+        height: 50px;
+        border: none;
+        background-color: white;
+        color: #00afef;
+        border: 1px solid #e5e5e5;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .PC-Product-Page .card button:hover {
+        background-color: #00afef;
+        color: white;
+        font-weight: bold;
+      }
+      .PC-Product-Page .card:hover {
+        cursor: pointer;
+      }
+      .PC-Product-Page .card h1 {
+        font-size: 1rem;
+        font-weight: 500;
+        color: rgb(51, 51, 51);
+        line-height: 1.5;
+        font-family: "Lato", sans-serif;
+      }
+      .PC-Product-Page .card h4 {
+        background-color: #6da523;
+        color: white;
+        width: 15%;
+        font-size: 12px;
+        padding: 4px 3px;
+        margin: auto;
+        border-radius: 5px;
+      }
+      .PC-Product-Page .card h4 .iconify {
+        margin-bottom: -1px;
+        margin-left: 2px;
+        /* background-color: black; */
+      }
+      .PC-Product-Page .card h3 .iconify {
+        margin-bottom: -3px;
+        /* background-color: black; */
+      }
+
+      .PC-Product-Page .tag {
+        background-color: #ef5350;
+        color: rgb(255, 255, 255);
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 12px;
+        width: 35%;
+        padding: 3px 5px;
+        margin-left: -15px;
+        margin-top: -10px;
+      }
+      .PC-Product-Page .sortingDiv {
+        /* border: 1px solid red; */
+        width: 85%;
+        height: 60px;
+        margin: auto;
+        margin-top: 50px;
+      }
+      .PC-Product-Page .sortingDiv select {
+        float: right;
+        width: 30%;
+        height: 45px;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 15px;
+        border: 1px solid #e5e5e5;
+      }
+      .PC-Product-Page .sortingDiv select:hover {
+        border: 2px solid #00afef;
+      }
+
+      .accordion {
+        background-color: white;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 17px;
+        transition: 0.4s;
+        /* margin-left: 120px; */
+      }
+      .accordion:hover {
+        color: #96ca41;
+      }
+
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+        color: gray;
+      }
+      h1 {
+        text-align: center;
+        font-size: 50px;
+        color: gray;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .mine {
+        margin-bottom: 40px;
+      }
+      .fa-chevron-down {
+        margin-left: 90%;
+        color: #00afef;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav"></div>
+    <div id="shilpa">
+      <img
+        width="100%"
+        src="https://images.ctfassets.net/66mrrren2unf/62fMX7z3RN55j8FpWnIxhg/1a194a111a058b377248805cdea8449d/Desktop_Without_CTA.jpg?q=40"
+      />
+    </div>
+
+    <div class="PC-Product-Page">
+      <div class="sortingDiv">
+        <select id="sortByValue" onchange="sortBy()">
+          <option value="default">Sort By</option>
+          <option value="rate">Rating</option>
+          <option value="high">Price-High to Low</option>
+          <option value="low">Price-Low to High</option>
+        </select>
+      </div>
+      <div id="main"></div>
+    </div>
+    <h1>FAQ'S</h1>
+    <div class="mine">
+      <button class="accordion">
+        Can I Use Mama Earth Shampoo Daily ?
+        <i class="fas fa-chevron-down fa-lg"></i>
+      </button>
+      <div class="panel">
+        <p>
+          YESS definitely! Mamaearth shampoos are so good as they are free of
+          harmful chemicals and keeps hair healthy, strong and nourished.
+        </p>
+      </div>
+
+      <button class="accordion">
+        Which is the Best Shampoo for Dandruff ?
+        <i class="fas fa-chevron-down fa-lg"></i>
+      </button>
+      <div class="panel">
+        <p>
+          Mamaearth Tea Tree Shampoo is made using natural ingredients and makes
+          sure that dandruff and excess oil is gently worked on & removed. It
+          helps soothe irritating, oily, and flaky scalp by controlling
+          dandruff; thus, giving you an itch-free healthy scalp and nourished
+          hair.
+        </p>
+      </div>
+
+      <button class="accordion">
+        Which is the Best Shampoo for Hair Regrowth ?
+        <i class="fas fa-chevron-down fa-lg"></i>
+      </button>
+      <div class="panel">
+        <p>
+          Onion Oil, rich in Sulphur, Potassium & antioxidants, reduces hair
+          fall & accelerates hair regrowth. One of the newest breakthrough
+          ingredients in hair regrowth, Redensyl, unblocks hair follicles & also
+          boosts new hair growth.
+        </p>
+      </div>
+      <button class="accordion">
+        Which Shampoo is Best For Oily Hair ?
+        <i class="fas fa-chevron-down fa-lg"></i>
+      </button>
+      <div class="panel">
+        <p>
+          Healthline's picks for the best shampoo for oily hair Neutrogena
+          Anti-Residue Shampoo. ... Aveeno Apple Cider Vinegar Blend Shampoo.
+          ... OGX Hydrating + Tea Tree Mint Conditioner. ... Aveda Rosemary Mint
+          Weightless Conditioner. ... Klorane Dry Shampoo with Nettle. ...
+          Desert Essence Lemon Tea Tree Shampoo.
+        </p>
+      </div>
+
+      <button class="accordion">
+        Can I use Mama Earth Shampoo after Hair Treatment ?
+        <i class="fas fa-chevron-down fa-lg"></i>
+      </button>
+      <div class="panel">
+        <p>
+          Yes of course! The best shampoo for hair in India when it comes to
+          chemically treated hair is by Mamaearth. All Mamaearth Shampoos are
+          crafted with natural ingredients and hence suit all hair types.
+        </p>
+      </div>
+    </div>
+    <div id="footerDiv"></div>
+  </body>
+</html>
+<script type="module">
+  // ======================================importing Navbar===================================//
+
+  import navbar from "./components/navbar.js";
+
+  let container = document.getElementById("nav");
+
+  container.innerHTML = navbar();
+
+  ///=============================================================adding Accordion==========================================//
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+  //========================================importing Carousel=========================//
+
+  // const data1= JSON.parse(localStorage.getItem("mamaEarthProducts")) || [];
+  // const itemCarousel = document.getElementById("itemCarousel");
+  //     data1.map((item1) => {
+  //     createCard(
+  //       item1.title,
+  //       item1.imgUrl[0],
+  //       item1.category,
+  //       item1.price,
+  //       item1.id,
+  //       item1.rating,
+  //       1
+  //     );
+  //   });
+
+  //     function createCard(
+  //         title,
+  //         imgUrl,
+  //         category,
+  //         price,
+  //         id,
+  //         rating,
+  //         selectItem
+  //       ) {
+  //         const div = document.createElement("div");
+  //         div.setAttribute("class", "myCard card card-1");
+  //         div.innerHTML = `<img
+  //                       src="${imgUrl}"
+  //                       alt=""
+  //                     />
+  //                     <p>
+  //                      ${title}
+  //                     </p>
+  //                     <span></span>
+  //                     <p>
+  //                       <span id="price">&#8377; 690</span>
+  //                       <span id="actualPrice">&#8377; ${price}</span> |
+  //                       <span id="offer">(3% off)</span>
+  //                     </p>
+  //                     <button>Add To Cart</button>
+  //                   `;
+  //         if (selectItem == 1) {
+  //           itemCarousel.append(div);
+  //         }
+
+  //         console.log(selectItem);
+  //     }
+  //         $("#itemCarousel").owlCarousel({
+  //             margin: 20,
+  //             loop: false,
+  //             autoplay: false,
+  //             responsive: {
+  //               1000: {
+  //                 items: 3,
+  //                 nav: true,
+  //               },
+  //             },
+  //           });
+
+  //===================== Display Products from local Storage Start============================//
+
+  // var data = JSON.parse(localStorage.getItem("mamaEarthProducts"));
+  //var data = JSON.parse(localStorage.getItem("mamaEarthProducts")) || [];
+  // console.log(data);
+  // var main = document.getElementById("main");
+
+  // showProducts(data);
+  // function showProducts(data){
+  //     main.innerHTML = "";
+  //         data.forEach(item => {
+  //             main.innerHTML +=
+  //             `
+  //             <div class="card">
+  //                 <div class="tagsName tag">Best Seller</div>
+  //                 <img src="${item.imgUrl[0]}">
+  //                 <h1>${item.title}</h1>
+  //                 <h4>${item.rating}<span class="iconify" data-icon="dashicons:star-filled"></span></h4>
+  //                 <h3><span class="iconify" data-icon="icons8:rupee"></span>${item.price}</h3>
+  //                 <button onclick = "addToCart('${item.id}')">Add to Cart</button>
+  //              </div>
+  //             `
+  //         });
+  //     }
+  //=================== Display Products from local Storage END=============================//
+
+  //======================= Add Products To Cart Start==================================//
+
+  //  var userDetails = JSON.parse(localStorage.getItem("userDetail"));
+  //  var userdetails = JSON.parse.localStorage.getItem("userDetails");
+
+  //  var cart = [];
+
+  //  console.log(userDetails);
+
+  //  function addToCart(id){
+  //      console.log(id);
+  //      console.log(userDetails.email);
+
+  //      var e = userDetails.email;
+
+  //      var obj = {
+  //          userEmail: e,
+  //          productId: id,
+  //      }
+
+  //      console.log(obj);
+  //      var flag = false;
+  //         for(var i=0;i<cart.length;i++){
+  //              if(cart[i].userEmail == e && cart[i].productId == id){
+  //                  flag = true;
+  //                  break;
+  //              }
+
+  //    console.log(cart[i].userEmail , cart[i].productId);
+
+  //         }
+  //           if(flag ){
+  //               alert("Item successfully added again");
+  //               cart.push(obj);
+  //               localStorage.setItem("CartItems", JSON.stringify(cart));
+
+  //           } else {
+  //               alert(" Successfully added in the cart !")
+  //               cart.push(obj);
+  //               localStorage.setItem("CartItems", JSON.stringify(cart));
+
+  //           }
+  //  }
+
+  //============================ Add Products To Cart End=================================//
+
+  //================================= Sort function=========================================//
+
+  //  function sortBy()
+  //         {
+
+  //             var temp = document.getElementById("sortByValue").value;
+  //             if(temp == "low")
+  //                 {
+  //                     var sorted = data;
+  //                     sorted.sort(function (a,b)
+  //                      {
+  //                        return a.price - b.price;
+  //                     });
+  //                     showProducts(sorted);
+  //                 }
+  //            else if(temp == "high")
+  //                 {
+  //                     var sorted = data;
+  //                     sorted.sort(function (a,b)
+  //                      {
+  //                         return b.price - a.price;
+  //                     });
+  //                    showProducts(sorted);
+  //                 }
+  //             else if(temp == "rate")
+  //             {
+  //                 var sorted = data;
+  //                 sorted.sort(function (a,b)
+  //                 {
+  //                     return b.rating - a.rating;
+  //                 });
+  //             showProducts(sorted);
+  //             }
+  //             else if(temp == "default")
+  //                 {
+  //                     showProducts(data);
+
+  //                 }
+
+  //         }
+  //=============================== sort function===================================//
+
+  //==============================================================importing Footer====================//
+
+  import footer from "./components/footer.js";
+
+  let FD = document.getElementById("footerDiv");
+
+  FD.innerHTML = footer();
+</script>
+
+<script src="js/products.js"></script>
