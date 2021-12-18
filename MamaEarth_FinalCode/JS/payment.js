@@ -44,7 +44,7 @@ function makePayment() {
 
     return alert("ENTER VALID DETAILS!!!");
   } else {
-    return alert("PAYMENT SUCCESSFUL !!!");
+    alert("PAYMENT SUCCESSFUL !!!");
     window.location.href = "./index.html";
   }
 }
