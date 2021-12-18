@@ -11,11 +11,8 @@ function makePayment(){
     var Da = document.getElementById("date").value.length
     var CV = document.getElementById("cvv").value.length
 
-
     if(FN ==0 || LN ==0 ||EI ==0 ||PN >10 || PN < 10||PC ==0 ||Ci ==0 ||St ==0 ||Ad ==0 ||CN >16 || CN < 16||Da >4 || Da < 4||CV >3 || CV < 3 ){
          
-        
-        
         if(PN >10 || PN < 10){ 
                                     
             return alert("ENTER VALID NUMBER");
@@ -36,6 +33,7 @@ function makePayment(){
     } 
     else{
         
-        return alert("PAYMENT SUCCESSFUL !!!")
+        return alert("PAYMENT SUCCESSFUL, YOUR ORDER IS ON THE WAY  !!!")
+        window.location.href = "index.html";
     }
 }
