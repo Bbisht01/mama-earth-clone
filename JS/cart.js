@@ -82,6 +82,12 @@ function discount(){
 }
 
 //==========================================================================================================================
+function erase(){
+    localStorage.removeItem("CartItems");
+    alert('ALL ITEMS REMOVE FROM CART !!')
+    window.location.reload();
+}
+//====================================================================================================
 function redirectToPayment() {
     window.location.href = "payment.html";
 }
