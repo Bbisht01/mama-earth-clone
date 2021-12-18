@@ -32,8 +32,8 @@ function makePayment(){
 
     } 
     else{
-        
+        window.location.href = "FinalPage.html";
         return alert("PAYMENT SUCCESSFUL, YOUR ORDER IS ON THE WAY  !!!")
-        window.location.href = "index.html";
+       
     }
 }
