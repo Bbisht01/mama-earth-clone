@@ -287,14 +287,20 @@ data-ride="carousel"
 
   
 
-
+   let lcl = JSON.parse(localStorage.getItem('userDetail'))
     function redirectToIndiProduct(title){
       console.log(title);   
-      localStorage.setItem("inProPage", JSON.stringify(title));   
+      
+      if(lcl == null){
+        alert('Please Login to Continue')
+        window.location.href = "signup.html"
+      }else{
+        localStorage.setItem("inProPage", JSON.stringify(title));   
      window.location.href = "IndividualProductPage.html"
     }
+    }
 
-    let lcl = JSON.parse(localStorage.getItem('userDetail'))
+  
 let loggedName = document.getElementById("changingName")   
 console.log(lcl)
 

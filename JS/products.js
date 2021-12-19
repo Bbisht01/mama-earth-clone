@@ -119,10 +119,18 @@ var count = 0
             
         }
 
+        let lclStr = JSON.parse(localStorage.getItem('userDetail'))
+
         function redirectToIndiProduct(title){
             console.log(title);   
-            localStorage.setItem("inProPage", JSON.stringify(title));   
-           window.location.href = "IndividualProductPage.html"
+            
+            if(lclStr == null){
+                alert('Please Login to Continue')
+                window.location.href = "signup.html"
+              }else{
+                localStorage.setItem("inProPage", JSON.stringify(title));  
+             window.location.href = "IndividualProductPage.html"
+            }
           }
       
 //=============================== sort function===================================//
