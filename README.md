@@ -1,15 +1,14 @@
-# Mama-Earth-Clone
+# Mama-Earth
+This is a clone of www.mamaearth.in website made using HTML, CSS and JS. It's an India based E-commerce website for skin care products.
 
-Description
+## Webpages
 
-# Layout of the project
-
-1-Home-Page
+1.Homepage
 
 ![homePage](https://user-images.githubusercontent.com/84259086/146634432-0cbe08e1-00f3-4ca8-ae03-24f7b62cc414.PNG)
 
 
-2-SignUp-Page
+2.SignUp-Page
 
 ![signuppage](https://user-images.githubusercontent.com/84259086/146634517-0281d2b5-d970-4482-b5f3-7346daa1b1c6.PNG)
 
