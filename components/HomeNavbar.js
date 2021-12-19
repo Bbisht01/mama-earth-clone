@@ -76,7 +76,7 @@ function navbar() {
 
         <ul class = "inline">
             <li class="bold">Hair</li>
-            <a id="shampoo" href="Products.html"><li>Shampoo</li></a>
+            <a id="shampoo" href="products.html"><li>Shampoo</li></a>
             <li>conditioner</li>
             <li>Hair Oil</li>
             <li>Hair Mask</li>
