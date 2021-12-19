@@ -26,7 +26,7 @@ function navbar() {
     <a href = "cart.html"><span class="iconify" data-icon="bytesize:cart"></span>Cart</a> 
     </div>
     <div id="nav2icon2">
-    <a href = "signup.html"><span class="iconify" data-icon="bytesize:user"></span>Login</a>
+    <a href = "signup.html" id="changingName"><span class="iconify" data-icon="bytesize:user"></span>Login</a>
 </div>
 </div>
 <div id = "nav3">
@@ -56,7 +56,6 @@ function navbar() {
         </ul>
     </div> </div>
 
-
     <div  id="beauty" class="dropdown"> <p>BEAUTY</p> <div class="dropdown-content">
     <ul class = "inline">
             <li class="bold">Explore</li>
@@ -77,7 +76,6 @@ function navbar() {
             <li class="blue">See All</li>
         </ul>
     </div> </div>
-
 
     <div  id="hair" class="dropdown"> <p>HAIR</p> <div class="dropdown-content">
     <ul class = "inline">
@@ -101,7 +99,6 @@ function navbar() {
             <li class="blue">See All</li>
         </ul>
     </div> </div>
-
 
     <div  id="face" class="dropdown"> <p>FACE</p> <div class="dropdown-content">
     <ul class = "inline">
@@ -128,7 +125,6 @@ function navbar() {
             <li class="blue">See All</li>
         </ul>
     </div> </div>
-
 
     <div  id="body" class="dropdown"> <p>BODY</p> <div class="dropdown-content">
     <ul class = "inline">

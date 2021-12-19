@@ -294,5 +294,15 @@ data-ride="carousel"
      window.location.href = "IndividualProductPage.html"
     }
 
+    let lcl = JSON.parse(localStorage.getItem('userDetail'))
+let loggedName = document.getElementById("changingName")   
+console.log(lcl)
+
+if(lcl != null){
+  let nme = (lcl[0].userName)
+  loggedName.innerHTML = ""
+  loggedName.innerHTML = `<span class="iconify" data-icon="bytesize:user"></span>${nme}`
+}
+
   </script>
 </html>
