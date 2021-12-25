@@ -78,6 +78,9 @@
         height: 38px;
         /* border: 1px solid red; */
     }
+    .navbarCommonToAll #nav2 #nav2icon2{
+      width: 16%;
+    }
     .navbarCommonToAll #nav2 .iconify{
         color: #00afef;
         font-size: 22px;
