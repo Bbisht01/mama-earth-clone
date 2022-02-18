@@ -11,10 +11,10 @@ function navbar() {
    </a>
     <span class="iconify" data-icon="bytesize:user"></span>
     </div>
-
+    
 <div id = "nav2">
     <div id="nav2Logo">
-    <a href="index.html"><img id = "logo" src = "https://media.loylty.com/movies/bannerimg_20210730184309563.jpg">
+    <a href="HOME.html"><img id = "logo" src = "https://media.loylty.com/movies/bannerimg_20210730184309563.jpg">
     </a>
   </div>
 

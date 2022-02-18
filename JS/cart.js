@@ -6,7 +6,7 @@ var loggedUser = JSON.parse(localStorage.getItem("userDetail"));
 var userID = [];
 
 if (loggedUser != null) {
-    var userID = loggedUser;
+    var userID = loggedUser;      
 }
 var usercart = []
 data.forEach(element => {

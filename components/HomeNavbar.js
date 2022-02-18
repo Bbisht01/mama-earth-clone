@@ -8,7 +8,7 @@ function navbar() {
     </p></a>
     <i class="far fa-user"></i>
 </div>
-<div id = "nav2">
+<div id = "nav2"> 
     <img id = "logo" src = "https://media.loylty.com/movies/bannerimg_20210730184309563.jpg" >
     <div id = "nav2s">
         <input id = "srch" type = "text" placeholder = "Search for products.."><button id = "btn"><i class="fas fa-search"></i>Search</button>

@@ -6,7 +6,7 @@ let finaldata = []
 
 let local2 = JSON.parse(localStorage.getItem('inProPage')) 
 for(var i = 0 ; i<local.length ; i++){
-     if(local[i].title == local2){
+     if(local[i].title == local2){        
       finaldata.push(local[i])
      }
 }

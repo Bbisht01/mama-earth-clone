@@ -7,7 +7,7 @@ function footer() {
     </div>
     <div class="first"> <img src="img/second.png"> </div>
     <div class="third">
-        <ul>
+        <ul>             
             <li class="capital">USEFUL LINKS</li>
             <li class="small">Privacy Policy</li>
             <li class="small">Returns</li>
